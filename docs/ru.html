@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Максим Северухин</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #111;
+      background-color: #fdfdfd;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-feature-settings: 'kern' 1;
+      -moz-font-feature-settings: 'kern' 1;
+      -o-font-feature-settings: 'kern' 1;
+      font-feature-settings: 'kern' 1;
+      font-kerning: normal;
+      padding: 30px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        padding: 5px;
+      }
+
+      main {
+        padding: 0px 20px 20px 20px !important;
+      }
+    }
+
+    main {
+      margin: 0px;
+      max-width: 900px;
+      padding-bottom: 20px;
+      border-radius: 2px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    hr {
+      color: #bbb;
+      background-color: #bbb;
+      height: 1px;
+      flex: 0 1 auto;
+      margin: 1em 0;
+      padding: 0;
+      border: none;
+    }
+
+    /**
+ * Links
+ */
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #0366d6;
+    }
+
+    a:hover {
+      color: #0366d6;
+      text-decoration: underline;
+    }
+
+    pre {
+      background-color: #f6f8fa;
+      border-radius: 3px;
+      font-size: 85%;
+      line-height: 1.45;
+      overflow: auto;
+      padding: 16px;
+    }
+
+    /**
+  * Code blocks
+  */
+
+    code {
+      background-color: rgba(27, 31, 35, 0.05);
+      border-radius: 3px;
+      font-size: 85%;
+      margin: 0;
+      word-wrap: break-word;
+      padding: 0.2em 0.4em;
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+        monospace;
+    }
+
+    pre>code {
+      background-color: transparent;
+      border: 0;
+      display: inline;
+      line-height: inherit;
+      margin: 0;
+      overflow: visible;
+      padding: 0;
+      word-wrap: normal;
+      font-size: 100%;
+    }
+
+    /**
+ * Blockquotes
+ */
+    blockquote {
+      margin-left: 30px;
+      margin-top: 0px;
+      margin-bottom: 16px;
+      border-left-width: 3px;
+      padding: 0 1em;
+      color: #828282;
+      border-left: 4px solid #e8e8e8;
+      padding-left: 15px;
+      font-size: 18px;
+      letter-spacing: -1px;
+      font-style: italic;
+    }
+
+    blockquote * {
+      font-style: normal !important;
+      letter-spacing: 0;
+      color: #6a737d !important;
+    }
+
+    /**
+ * Tables
+ */
+    table {
+      border-spacing: 2px;
+      display: block;
+      font-size: 14px;
+      overflow: auto;
+      width: 100%;
+      margin-bottom: 16px;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
+
+    th {
+      font-weight: 600;
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
+
+    tr {
+      background-color: #fff;
+      border-top: 1px solid #c6cbd1;
+    }
+
+    table tr:nth-child(2n) {
+      background-color: #f6f8fa;
+    }
+
+    /**
+ * Others
+ */
+
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #24292e;
+    }
+
+    ul {
+      margin-top: 0;
+    }
+
+    li {
+      color: #24292e;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    li+li {
+      margin-top: 0.25em;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      color: #24292e;
+    }
+
+    a:visited {
+      color: #0366d6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      border-bottom: 1px solid #eaecef;
+      color: #111;
+      /* Darker */
+    }
+  </style>
+  <style>
+    pre code.hljs {
+      display: block;
+      overflow-x: auto;
+      padding: 1em
+    }
+
+    code.hljs {
+      padding: 3px 5px
+    }
+
+    /*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+    .hljs {
+      color: #24292e;
+      background: #ffffff
+    }
+
+    .hljs-doctag,
+    .hljs-keyword,
+    .hljs-meta .hljs-keyword,
+    .hljs-template-tag,
+    .hljs-template-variable,
+    .hljs-type,
+    .hljs-variable.language_ {
+      /* prettylights-syntax-keyword */
+      color: #d73a49
+    }
+
+    .hljs-title,
+    .hljs-title.class_,
+    .hljs-title.class_.inherited__,
+    .hljs-title.function_ {
+      /* prettylights-syntax-entity */
+      color: #6f42c1
+    }
+
+    .hljs-attr,
+    .hljs-attribute,
+    .hljs-literal,
+    .hljs-meta,
+    .hljs-number,
+    .hljs-operator,
+    .hljs-variable,
+    .hljs-selector-attr,
+    .hljs-selector-class,
+    .hljs-selector-id {
+      /* prettylights-syntax-constant */
+      color: #005cc5
+    }
+
+    .hljs-regexp,
+    .hljs-string,
+    .hljs-meta .hljs-string {
+      /* prettylights-syntax-string */
+      color: #032f62
+    }
+
+    .hljs-built_in,
+    .hljs-symbol {
+      /* prettylights-syntax-variable */
+      color: #e36209
+    }
+
+    .hljs-comment,
+    .hljs-code,
+    .hljs-formula {
+      /* prettylights-syntax-comment */
+      color: #6a737d
+    }
+
+    .hljs-name,
+    .hljs-quote,
+    .hljs-selector-tag,
+    .hljs-selector-pseudo {
+      /* prettylights-syntax-entity-tag */
+      color: #22863a
+    }
+
+    .hljs-subst {
+      /* prettylights-syntax-storage-modifier-import */
+      color: #24292e
+    }
+
+    .hljs-section {
+      /* prettylights-syntax-markup-heading */
+      color: #005cc5;
+      font-weight: bold
+    }
+
+    .hljs-bullet {
+      /* prettylights-syntax-markup-list */
+      color: #735c0f
+    }
+
+    .hljs-emphasis {
+      /* prettylights-syntax-markup-italic */
+      color: #24292e;
+      font-style: italic
+    }
+
+    .hljs-strong {
+      /* prettylights-syntax-markup-bold */
+      color: #24292e;
+      font-weight: bold
+    }
+
+    .hljs-addition {
+      /* prettylights-syntax-markup-inserted */
+      color: #22863a;
+      background-color: #f0fff4
+    }
+
+    .hljs-deletion {
+      /* prettylights-syntax-markup-deleted */
+      color: #b31d28;
+      background-color: #ffeef0
+    }
+
+    .hljs-char.escape_,
+    .hljs-link,
+    .hljs-params,
+    .hljs-property,
+    .hljs-punctuation,
+    .hljs-tag {
+      /* purposely ignored */
+
+    }
+
+    @media only print {
+      main {
+        max-width: fit-content;
+      }
+
+      #lang-switcher {
+        display: none;
+      }
+
+      a:after {
+        content: " [" attr(href) "] ";
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p style="text-align: right;" id="lang-switcher">
+      <a href="ru.html" style="font-weight: bold;">🇷🇺 Русская версия</a> |
+      <a href="index.html">🇬🇧 English version</a>
+    </p>
+    <hr />
+    <h2 id="🧰-технический-стек">🧰 Технический стек</h2>
+    <p align="left">
+      <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-Vue-4FC08D?logo=vue.js&logoColor=white&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-Node.js-339933?logo=nodedotjs&logoColor=white&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-Tailwind-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-GraphQL-E10098?logo=graphql&logoColor=white&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-Jest-C21325?logo=jest&logoColor=white&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-Vitest-86b91a?logo=jest&logoColor=white&style=for-the-badge" />
+      <img src="https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white&style=for-the-badge" />
+    </p>
+    <h2 id="👋-привет-меня-зовут-максим-северухин">👋 Привет! Меня зовут Максим Северухин</h2>
+    <p>Я Senior Frontend Developer с более чем 12-летним опытом в веб-рфзработке и более 7 лет в фронтенд-разработке.
+      Мой основной стек — React, Vue и Node.js. Я создаю современные веб-приложения, участвую в найме и менторстве
+      разработчиков, разрабатываю UI-библиотеки компонентов и активно работаю над производительностью интерфейсов.</p>
+    <hr />
+    <h3 id="🛠️-скилы">🛠️ Скилы</h3>
+    <ul>
+      <li><strong>Языки программирования:</strong> JavaScript, TypeScript</li>
+      <li><strong>Фреймворки:</strong> React, Vue</li>
+      <li><strong>Управление состоянием:</strong> Redux, Vuex, Zustand, Pinia</li>
+      <li><strong>Бекенд:</strong> NodeJS, REST API, GraphQL</li>
+      <li><strong>Бандлеры:</strong> Vite, Webpack</li>
+      <li><strong>Тестирование:</strong> Vitest, Jest, Testing Library</li>
+      <li><strong>Стилизация:</strong> CSS, SASS, BEM, Tailwind CSS</li>
+      <li><strong>Дизайн:</strong> Figma, Lunacy</li>
+    </ul>
+    <hr />
+    <h3 id="💼-опыт-работы">💼 Опыт работы</h3>
+    <article>
+      <p><strong>Senior Frontend Developer</strong> - amma pregnancy tracker \<br />
+        📅 11.2023 — 05.2025</p>
+      <ul>
+        <li>Разработка социальной платформы для беременных женщин </li>
+        <li>Интеграция аналитики и сторонних сервисов </li>
+        <li>Разработка веб-приложения и интеграция в WebView на iOS/Android </li>
+        <li>Расзработка UI-библиотеки компонентов и интеграция ее в панель администрирования</li>
+        <li>Найм инженеров, ревью кода, деплой и настройка CI/CD пайплайнов</li>
+      </ul>
+    </article>
+    <article>
+      <p><strong>Software Engineer</strong> — EPAM <br />
+        📅 10.2017 — 10.2023 </p>
+      <ul>
+        <li>Разработка e-commerce и банковских приложений с нуля (React, Vue) </li>
+        <li>Оптимизация Time-to-interactive, Time-to-market метрик</li>
+        <li>Активно участвовал в разработке UI-kit библиотеки компонентов</li>
+        <li>Поддержка команд, коучинг, код-ревью </li>
+        <li>Руководство командами до 5 человек</li>
+      </ul>
+    </article>
+    <article>
+      <p><strong>Software Engineer</strong> — Foodsoul <br />
+        📅 12.2016 — 10.2017 </p>
+      <ul>
+        <li>Веб-прилодения онлайн-заказа еды</li>
+        <li>Интеграция приложений в сторонние платформы (в т.ч. VK)</li>
+      </ul>
+    </article>
+    <p>…</p>
+    <hr />
+    <h3 id="образование">Образование</h3>
+    <p><strong>Московская финансово-юридическая академия (МФЮА)</strong><br />
+      Прикладная информатика в экономике, 2011</p>
+    <hr />
+    <h3 id="🗣️-языки">🗣️ Языки</h3>
+    <ul>
+      <li>Русский — родной </li>
+      <li>Английский — средний уровень</li>
+    </ul>
+    <hr />
+    <h3 id="📫-контакты">📫 Контакты</h3>
+    <ul>
+      <li>📧 <a href="mailto:mousemckill@gmail.com">mousemckill@gmail.com</a></li>
+      <li>🔗 <a href="https://www.linkedin.com/in/maks-severukhin">linkedin.com/in/maks-severukhin</a></li>
+      <li>💬 <a href="https://t.me/mousemckill">Telegram</a></li>
+    </ul>
+    <!--
+**mousemckill/mousemckill** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+Here are some ideas to get you started:
+
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->
+  </main>
+</body>
+
+</html>
