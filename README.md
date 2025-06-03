@@ -41,7 +41,7 @@ I’m a Senior Frontend Developer with over 12 years of experience in software d
 
 ### 💼 Experience
 
-**Senior Frontend Developer** - amma pregnancy tracker
+**Senior Frontend Developer** - amma pregnancy tracker \
 📅 11/2023 — 05/2025
 - Developed a social network for pregnant women  
 - Integrated analytics and 3rd-party services  
@@ -49,7 +49,7 @@ I’m a Senior Frontend Developer with over 12 years of experience in software d
 - Maintained UI component library and admin panel  
 - Participated in hiring and mentoring engineers
 
-**Software Engineer** — EPAM  
+**Software Engineer** — EPAM \
 📅 10/2017 — 10/2023  
 - Developed e-commerce and banking apps from scratch (React, Vue)  
 - Focused on TTI, bundle size, and performance metrics 
@@ -57,7 +57,7 @@ I’m a Senior Frontend Developer with over 12 years of experience in software d
 - Code reviews, pair programming, mentoring  
 - Led teams of 2–5 engineers
 
-**Software Engineer** — Foodsoul  
+**Software Engineer** — Foodsoul \ 
 📅 12/2016 — 10/2017  
 - Built restaurant ordering systems and widgets  
 - Created mini-apps (including for VK platform)
