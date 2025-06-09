@@ -6,26 +6,18 @@ const { site } = useData<Theme>();
 </script>
 
 <template>
-  <section class="mt-2 lg:mt-8 flex lg:flex-col gap-2 flex-wrap w-full">
-    <SocialLink
-      :link="`mailto:${site.themeConfig.socialLinks.email}`"
-      icon="i-mdi-email"
-    >
+  <section class="mt-2 lg:mt-8 flex lg:flex-col gap-x-2 flex-wrap w-full">
+    <SocialLink :link="`mailto:${site.themeConfig.socialLinks.email}`" :data-link="site.themeConfig.socialLinks.email"
+      icon="i-mdi-email">
       Email
     </SocialLink>
     <SocialLink :link="site.themeConfig.socialLinks.github" icon="i-mdi-github">
       Github
     </SocialLink>
-    <SocialLink
-      :link="site.themeConfig.socialLinks.linkedin"
-      icon="i-mdi-linkedin"
-    >
+    <SocialLink :link="site.themeConfig.socialLinks.linkedin" icon="i-mdi-linkedin">
       LinkedIn
     </SocialLink>
-    <SocialLink
-      :link="site.themeConfig.socialLinks.telegram"
-      icon="i-mdi-telegram"
-    >
+    <SocialLink :link="site.themeConfig.socialLinks.telegram" icon="i-mdi-telegram">
       Telegram
     </SocialLink>
   </section>
